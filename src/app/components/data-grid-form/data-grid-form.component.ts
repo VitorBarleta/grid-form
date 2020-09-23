@@ -22,14 +22,14 @@ export class DataGridFormComponent implements OnInit {
   }
 
   public getDisplayedColumns(): string[] {
-    return this.tableConfig.map(tb => tb.id);
+    return [ 'select', ...this.tableConfig.map(tb => tb.id) ];
   }
 
   public getColumnValue(col: any, colDef: any): string[] {
-    return col[colDef.id]
+    return col[colDef.id];
   }
 
   displayFooterRow(): boolean {
-    return this.tableConfig.map(tb => tb.formConfig) == undefined;
+    return !this.tableConfig?.map(tb => tb.formConfig);
   }
 }

@@ -28,10 +28,20 @@ export class AppComponent {
     {
       title: 'Employee',
       id: 'name',
+      formConfig: {
+        controlName: 'name',
+        displayedLabel: 'Name',
+        type: 'text'
+      }
     },
     {
       title: 'Age',
       id: 'age',
+      formConfig: {
+        controlName: 'age',
+        displayedLabel: 'Age',
+        type: 'number'
+      }
     },
     {
       title: 'sdfsd',
